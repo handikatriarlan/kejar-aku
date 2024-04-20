@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Kejar-kerjaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Tangkap Tombol Di Bawah Ini!</h1>
+    <button id="tangkap">Kejar Aku</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('#tangkap').on('mouseover', function () {
+            //     $(this).animate({
+            //         opacity: 0
+            //     }, 0)
+            // })
+            $('#tangkap').on('mouseover', function () {
+                let randomMarginLeft = Math.floor(Math.random() * 1000)
+                let randomMarginTop = Math.floor(Math.random() * 500)
+
+                $(this).animate({
+                    marginLeft: randomMarginLeft + 'px',
+                    marginTop: randomMarginTop + 'px'
+                }, 100)
+            })
+            // $('#tangkap').on('mouseleave', function () {
+            //     $(this).animate({
+            //         opacity: 100
+            //     }, 100)
+            // })
+            $('#tangkap').on('click', function () {
+                alert('Selamat ya, akhirnya kena juga.')
+            })
+        })
+    </script>
+</body>
+
+</html>
